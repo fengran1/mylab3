@@ -27,5 +27,4 @@ urlpatterns = [
     url('^update/(.+)/$',update),
 ]
 
-/*ff*/
-123
+dhbu

@@ -107,3 +107,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 /*fff*/
 2
+fff
+12345
