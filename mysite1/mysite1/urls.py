@@ -26,3 +26,5 @@ urlpatterns = [
     url('^addauthor/$',addauthor),
     url('^update/(.+)/$',update),
 ]
+
+/*ff*/
