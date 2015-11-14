@@ -1,2 +1,1 @@
-fff
-12345
+import os
