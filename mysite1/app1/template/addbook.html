@@ -1,0 +1,38 @@
+﻿<html>
+<head><title>图书管理系统</title></head>
+
+<body>
+<center><h1>图书管理系统</h1></center>
+<center><h2>添加图书</h2></center>
+<meta charset = "utf-8">
+
+<form method="post">
+<table>
+<tr><td>图书ISBN：<input type="number" name="ISBN"></td></tr>
+<tr><td>图书名：<input type="text" name="Title"></td></tr>
+<tr><td>出版社：<input type="text" name="Publisher"></td></tr>
+<tr><td>出版日期：<input type="text" name="PublishDate">（出版日期请重新按形如2012-10-10形式输入）</td></tr>
+<tr><td>价格：<input type="number" name="Price">（价格请按形如25.3形式输入）</td></tr>
+</table>
+
+作者：
+<select name="select" id="select_k1"> 
+{% for option in options %}   
+<option value="{{ option.AuthorID }}">{{ option.Name }}</option>  
+{% endfor %} 
+</select>
+
+<tr><td><input type="submit" value="添加"></td></tr>
+</form>
+
+{% if error %}
+{{error}}
+{% endif %}
+
+
+
+<tr><td><a href="/index/">返回首页</a></td><tr>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<html>
+<head><title>图书管理系统</title></head>
+
+<body>
+<center><h1>图书管理系统</h1></center>
+<center><h2>图书信息</h2></center>
+<meta charset = "utf-8">
+
+{% if error %}
+{{error}}
+{% endif %}
+
+{% if not error %}
+<table>
+<tr><td>图书ISBN：{{ book.ISBN }}</td></tr>
+<tr><td>图书名：{{ book.Title }}</td></tr>
+<tr><td>出版社：{{ book.Publisher }}</td></tr>
+<tr><td>出版日期：{{ book.PublishDate }}</td></tr>
+<tr><td>价格：{{ book.Price }}</td></tr>
+</table>
+<table>
+<tr><td>作者：{{ author.Name }}</td></tr>
+<tr><td>作者ID：{{ book.AuthorID.AuthorID }}</td></tr>
+<tr><td>年龄：{{ author.Age }}</td></tr>
+<tr><td>国籍：{{ author.Country }}</td></tr>
+</table>
+{% endif %}
+
+
+<tr><td><a href="/update/{{ book.ISBN }}/">修改</a></td></tr>
+<tr><td><a href="/index/">返回首页</a></td></tr>
+
+
+</body>
+</html>

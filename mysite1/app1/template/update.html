@@ -1,0 +1,40 @@
+﻿<html>
+<head><title>图书管理系统</title></head>
+
+<body>
+<center><h1>图书管理系统</h1></center>
+<center><h2>图书信息</h2></center>
+<meta charset = "utf-8">
+
+{% if error %}
+{{error}}
+{% endif %}
+
+{% if not error %}
+<form method="post">
+<table>
+<tr><td>图书ISBN：<input readonly="true" value="{{ book.ISBN }}" type="text" name="ISBN">（图书ISBN唯一，不可修改）</td></tr>
+<tr><td>图书名：<input value="{{ book.Title }}" type="text" name="Title"></td></tr>
+<tr><td>出版社：<input value="{{ book.Publisher }}" type="text" name="Publisher"></td></tr>
+<tr><td>出版日期：<input value="{{ book.PublishDate }}" type="text" name="PublishDate">（出版日期请重新按形如2012-10-10形式输入）</td></tr>
+<tr><td>价格：<input value="{{ book.Price }}" type="number" name="Price">（价格请按形如25.3形式输入）</td></tr>
+</table>
+
+作者：
+<select name="select" id="select_k1"> 
+{% for option in options %}   
+<option value="{{ option.AuthorID }}">{{ option.Name }}</option>  
+{% endfor %} 
+</select>
+
+<tr><td><input type="submit" value="更新"></td></tr>
+</form>
+
+{% endif %}
+
+
+<tr><td><a href="/index/">返回首页</a></td></tr>
+
+
+</body>
+</html>

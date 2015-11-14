@@ -1,0 +1,21 @@
+﻿<html>
+<head><title>图书管理系统</title></head>
+
+<body>
+<center><h1>图书管理系统</h1></center>
+<center><h2>已存图书</h2></center>
+
+<form method="get">
+<table>
+{% for bookname in booknames %}
+	<tr><td><a href="/book/{{bookname.ISBN}}/">{{ bookname.Title }}</a></td><td><button name="delete" value="{{bookname.ISBN}}">删除</button></td></tr>
+{% endfor %}
+</table>
+<a href="/search/">按作者查询</a>
+<a href="/addbook/">添加图书</a>
+<a href="/addauthor/">添加作者</a>
+</form>
+
+
+</body>
+</html>
