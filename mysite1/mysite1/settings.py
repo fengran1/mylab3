@@ -108,3 +108,4 @@ STATIC_URL = '/static/'
 /*fff*/
 2
 fff
+12345
