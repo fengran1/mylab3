@@ -15,3 +15,4 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite1.settings")
 
 application = get_wsgi_application()
 /*ffff*/
+3
